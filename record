@@ -1,0 +1,12 @@
+想要导入上一级模块最简单的方法就是将script设置为根目录
+
+在（包1）导入自定义包（包2）时，如果该自定义包中同样导入了其他自定义包，可能就会报错
+报错原因：相对路径
+    如果包1和包2位于同一个目录下，不会报错；
+    如果不在，此时路径已经变化了，是基于包1的相对路径，自然就会找不到包
+解决方案：设置根目录，根据根目录来导包
+
+在qt中调用getWindowHwnd，需要将屏幕缩放比列设置为100%，否则无法获取句柄？
+
+缺失 image_weights：
+    parser.add_argument("--image-weights", action="store_true", help="use weighted image selection for training")
